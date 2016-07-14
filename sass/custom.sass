@@ -1,0 +1,72 @@
+@charset "UTF-8"
+@import compass
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css)
+@import "base/_mixin.sass"
+@import "base/_variable.sass"
+
+/* Larger than tablet */
+body, html
+  width: 960px
+  margin: 0 auto
+  font-family: 'cwTeXHei', 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif
+ol, ul
+  list-style: none
+a
+  color: $acted-color
+p
+  margin: 0
+  margin-bottom: 2em
+
+nav
+  width: inherit
+  background-color: #FFF
+  &.fixed-nav
+    position: fixed
+  ul
+    padding: 0
+    border-bottom: 0.1em solid $bd-color
+    margin: 2em 0
+    overflow: hidden
+    li
+      float: left
+      letter-spacing: 0.1em
+      padding: 1em 1em 0.8em
+      margin: 0 1.3em
+      &.is-select
+        border-bottom: 0.2em solid $acted-color
+      &:hover
+        background-color: rgba($bg-gray, .3)
+      a
+        text-decoration: none
+        color: $font-color
+
+#about
+  font-size: 0
+  height: calc(100% - 50.8px)
+  padding: 40px
+  .intro-title, .intro
+    font-size: $font-s
+    +inline-block(top)
+  .intro-title
+    width: 6em
+    text-align: center
+    margin-right: 2.5em
+    .avatar
+      width: 6em
+      height: 6em
+      background-image: url("/img/header.jpeg")
+      +bg-cover(center)
+      +border-radius(50%)
+    .name
+      font-size: 18px
+      color: $font-gray
+      letter-spacing: 0.1em
+      span
+        font-size: 14px
+        color: lighten($font-gray, 20)
+        margin-left: 0.5em
+  .intro
+    width: calc(100% - 8.5em)
+    line-height: 1.7em
+    letter-spacing: 0.1em
