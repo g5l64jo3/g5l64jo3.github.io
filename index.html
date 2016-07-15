@@ -22,7 +22,7 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="#about">ABOUT</a></li>
+			<li class="is-select"><a href="#about">ABOUT</a></li>
 			<li><a href="#works">WORKS</a></li>
 		</ul>
 	</nav>
@@ -38,16 +38,64 @@
 			<p>畢業後任職於運動筆記，擔任前端工程師，期間參與小型客製化活動頁製作、年度站內回顧、介面流程設計與切版。</p>
 		</div>
 	</section>
-	<section id="works"></section>
+	<section id="works">
+		<div class="work-row">
+			<div class="work-img" style="background-image: url('/img/top10.png')"></div>
+			<div class="work-intro">
+				<div class="work-intro-inner">
+					<h3 class="work-title">2015年度回顧</h3>
+					<p class="work-desc"></p>
+					<a href="http://tw.running.biji.co/?q=vote" class="look-more">DEMO</a>
+				</div>
+			</div>
+		</div>
+		<div class="work-row">
+			<div class="work-intro">
+				<div class="work-intro-inner">
+					<h3 class="work-title">站內改版</h3>
+					<p class="work-desc">依流程與使用者習慣再次設計</p>
+					<a href="http://tw.running.biji.co/?q=album" class="look-more">改版成品</a>
+				</div>
+			</div>
+			<div class="work-img" style="background-image: url('/img/album.png')"></div>
+		</div>
+		<div class="work-row">
+			<div class="work-img" style="background-image: url('/img/minisite.png')"></div>
+			<div class="work-intro">
+				<div class="work-intro-inner">
+					<h3 class="work-title">行銷合作</h3>
+					<p class="work-desc">品牌專屬客製化活動頁</p>
+					<a href="http://tw.running.biji.co/?q=minisite&act=minisite&ads=minisite&minisite_id=39" class="look-more">DEMO</a>
+				</div>
+			</div>
+			<div class="work-row">
+				<div class="work-intro">
+					<div class="work-intro-inner">
+						<h3 class="work-title">購物流程</h3>
+						<p class="work-desc"></p>
+						<a href="http://tw.running.biji.co/?q=buy" class="look-more">DEMO</a>
+					</div>
+				</div>
+				<div class="work-img" style="background-image: url('/img/product.png')"></div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="copyright">
+			© LEA HUANG 
+		</div>
+	</footer>
 </body>
 </html>
 
 <script>
-	$(function(){
-		var selected_nav = $(location).attr('hash');
-		if(selected_nav == '')
-			selected_nav = '#about';
-		$('a[href$='+selected_nav+']').parent('li').addClass('is-select');
+	$('nav>ul>li').click(function() {
+	    event.preventDefault();
+	    var dom = $(this).children('a').attr('href');
+	    $('html, body').animate({
+	        scrollTop: $(dom).offset().top - 130
+	    }, 500);
+	    console.log($(dom).offset().top);
 	});
 	$(window).scroll(function() {
 		$('nav').addClass('fixed-nav');

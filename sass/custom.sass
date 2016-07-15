@@ -19,10 +19,11 @@ p
   margin-bottom: 2em
 
 nav
+  position: fixed
+  top: 0
   width: inherit
   background-color: #FFF
-  &.fixed-nav
-    position: fixed
+  z-index: 10
   ul
     padding: 0
     border-bottom: 0.1em solid $bd-color
@@ -31,20 +32,22 @@ nav
     li
       float: left
       letter-spacing: 0.1em
+      color: rgba($gray-color--d, .6)
       padding: 1em 1em 0.8em
       margin: 0 1.3em
       &.is-select
         border-bottom: 0.2em solid $acted-color
       &:hover
-        background-color: rgba($bg-gray, .3)
+        background-color: rgba($gray-color--l, .5)
       a
         text-decoration: none
-        color: $font-color
+        color: $gray-color--d
 
 #about
   font-size: 0
   height: calc(100% - 50.8px)
   padding: 40px
+  margin-top: 114.8px
   .intro-title, .intro
     font-size: $font-s
     +inline-block(top)
@@ -55,18 +58,66 @@ nav
     .avatar
       width: 6em
       height: 6em
-      background-image: url("/img/header.jpeg")
+      background-image: url("/img/header_1.jpeg")
       +bg-cover(center)
       +border-radius(50%)
     .name
       font-size: 18px
-      color: $font-gray
+      color: $gray-color--d
       letter-spacing: 0.1em
       span
         font-size: 14px
-        color: lighten($font-gray, 20)
+        color: rgba($gray-color--d, .6)
         margin-left: 0.5em
   .intro
     width: calc(100% - 8.5em)
     line-height: 1.7em
     letter-spacing: 0.1em
+    color: $gray-color--d
+
+#works
+  .work-row
+    font-size: 0
+    &:nth-child(2)
+      .work-img
+        width: 732px
+      .work-intro
+        width: calc(100% - 732px)
+    .work-img, .work-intro
+      height: 480px
+      +inline-block(middle)
+    .work-img
+      width: 480px
+      +bg-cover(center)
+    .work-intro
+      width: calc(100% - 480px)
+      position: relative
+      background-color: $gray-color--l
+      .work-intro-inner
+        text-align: center
+        +psa(50%, null, null, 50%, null)
+        +translate(-50%, -50%)
+        .work-title
+          letter-spacing: 0.1em
+          font-size: 24px
+          color: $gray-color--d
+          margin-bottom: 8px
+        .work-desc
+          font-size: $font-s
+          color: rgba($gray-color--d, .6)
+          margin-bottom: 30px
+        .look-more
+          display: inline-block
+          text-decoration: none
+          font-size: $font-s
+          color: $brown-color
+          padding: 8px 18px
+          border: 2px solid $brown-color
+          cursor: pointer
+
+footer
+  text-align: center
+  padding: 3em 0
+  .copyright
+    font-size: 14px
+    color: $gray-color--d

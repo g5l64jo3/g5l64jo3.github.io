@@ -1,8 +1,17 @@
-@mixin bg-cover($position:null)
-	background-position: $position
-	background-repeat: no-repeat
-	+background-size(cover)
+@mixin psa($top:null,$right:null,$bottom:null,$left:null,$zindex:null)
+	position: absolute
+	top: $top
+	right: $right
+	bottom: $bottom
+	left: $left
+	z-index: $zindex
 
 @mixin inline-block($position)
 	display: inline-block
 	vertical-align: $position
+
+@mixin bg-cover($position:null)
+	background-position: $position
+	background-repeat: no-repeat
+	+background-size(cover)
+	
