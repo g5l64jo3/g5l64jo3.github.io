@@ -7,9 +7,14 @@
 
 /* Larger than tablet */
 body, html
-  width: 960px
+  max-width: 960px
+  width: 100%
   margin: 0 auto
   font-family: 'cwTeXHei', 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+section, div
+  +box-sizing(content-box)
+
 ol, ul
   list-style: none
 a
@@ -25,6 +30,7 @@ nav
   background-color: #FFF
   z-index: 10
   ul
+    width: 960px
     padding: 0
     border-bottom: 0.1em solid $bd-color
     margin: 2em 0
@@ -59,7 +65,7 @@ nav
       width: 6em
       height: 6em
       background-image: url("/img/header.jpeg")
-      +bg-cover(center)
+      +bg-style(center)
       +border-radius(50%)
     .name
       font-size: 18px
@@ -80,17 +86,16 @@ nav
     font-size: 0
     &:nth-child(2)
       .work-img
-        width: 732px
+        width: 670px
       .work-intro
-        width: calc(100% - 732px)
+        width: calc(100% - 670px)
     .work-img, .work-intro
-      height: 480px
+      width: 50%
+      padding-bottom: 50%
       +inline-block(middle)
     .work-img
-      width: 480px
-      +bg-cover(center)
+      +bg-style(center)
     .work-intro
-      width: calc(100% - 480px)
       position: relative
       background-color: $gray-color--l
       .work-intro-inner
@@ -121,3 +126,41 @@ footer
   .copyright
     font-size: 14px
     color: $gray-color--d
+
+@media only screen and (max-width: 780px)
+  nav
+    ul
+      margin: 0.5em 0
+
+  #about
+    padding: 30px 19px
+    margin-top: 66.8px
+    .intro-title, .intro
+      width: 100%
+    .intro-title
+      margin: 0
+      margin-bottom: 1em
+      .avatar
+        margin: 0 auto
+  #works
+    .work-row
+      &:nth-child(2)
+        .work-img, .work-intro
+          width: 50%
+        .work-img
+          background-color: #000
+          +bg-style(center, contain)
+    .work-row
+      .work-intro
+        .work-intro-inner
+          .work-title
+            font-size: 18px
+            margin-top: 0
+          .work-desc
+            font-size: 14px
+            margin-bottom: 0.5em
+          .look-more
+            font-size: 12px
+            padding: 6px 10px
+
+        

@@ -10,8 +10,8 @@
 	display: inline-block
 	vertical-align: $position
 
-@mixin bg-cover($position:null)
+@mixin bg-style($position:null, $style:cover)
 	background-position: $position
 	background-repeat: no-repeat
-	+background-size(cover)
+	+background-size($style)
 	

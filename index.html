@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>About Me</title>
 	<meta name="description" content="">
 	<meta name="author" content="lea">
 
@@ -14,7 +14,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-	<link rel="stylesheet" href="css/custom.css?v=20160715036">
+	<link rel="stylesheet" href="css/custom.css?v=201607151102">
 
 	<!-- JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -32,9 +32,8 @@
 			<h1 class="name">黃懿瑢<span>Lea</span></h1>
 		</div>
 		<div class="intro">
-			<p>從小我就是個認真聽話的小孩，為了不讓父母、老師失望，成績在班上總是名列前茅。當時認為讀書就是學生的本份，只要把書念好就行了。大學時開闊了自己的視野，才瞭解到並非讀書就是一切。</p>
-			<p>2014年參加經濟部舉辦的「Open Data創新應用競賽」，以流浪動物為主題，構想出媒合流浪貓狗和認養者的平台，希望流浪動物能有好的歸屬，認養者也能找到心目中最好的寵物，這個點子符合大眾需求也獲得評審青睞。時間壓力下我們利用dicuz快速搭建會員、留言系統，獲得優等成績。這不僅引起我對網頁的興趣，也發現自己的不足</p>
-			<p>在剩餘的大學時光，旁聽介面設計的課程、選修網頁實作，加強自己的實力。在實作課程中，構想了關於組樂團的網站，目的是希望能幫樂手找到適合的樂團，或者幫樂團找到缺額的樂手。</p>
+			<p>首次接觸網頁是在2014年參加經濟部舉辦的「Open Data創新應用競賽」，以流浪動物為主題，構想出媒合流浪貓狗和認養者的平台，希望流浪動物能有好的歸屬，認養者也能找到心目中最好的寵物，這個點子符合大眾需求也獲得評審青睞。時間壓力下我們利用dicuz快速搭建會員、留言系統，獲得優等成績。這不僅引起我對網頁的興趣，也發現自己的不足</p>
+			<p>之後在剩餘的大學時光，旁聽介面設計的課程、選修網頁實作，加強自己的實力。在實作課程中，構想了關於組樂團的網站，目的是希望能幫樂手找到適合的樂團，或者幫樂團找到缺額的樂手。</p>
 			<p>畢業後任職於運動筆記，擔任前端工程師，期間參與小型客製化活動頁製作、年度站內回顧、介面流程設計與切版。</p>
 		</div>
 	</section>
@@ -98,9 +97,11 @@
 	    console.log($(dom).offset().top);
 	});
 	$(window).scroll(function() {
-		$('nav').addClass('fixed-nav');
-		if($(window).scrollTop()==0)
-			$('nav').removeClass('fixed-nav');
+		if($(window).scrollTop() == $('#works').offset().top) {
+			alert();
+			$('nav>ul>li').removeClass('is-select');
+			$('a[href$="#work"]').addClass('is-select');
+		}
 	});
 	$('nav li').click(function(){
 		$(this).addClass('is-select');
