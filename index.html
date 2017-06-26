@@ -3,14 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>About Me</title>
-	<meta name="description" content="">
 	<meta name="author" content="lea">
+	<meta name="description" content="Hi, I'm Lea Huang. I am a Front end web developer">
+	<meta property="og:title" content="About Me">
+	<meta property="og:description" content="Hi, I'm Lea Huang. I am a Front end web developer">
+	<meta property="og:url" content="http://g5l64jo3.github.io">
+	<meta property="og:image" content="http://g5l64jo3.github.io/img/avatar.jpg">
+	<meta property="og:site_name" content="About Me">
+	<meta property="og:type" content="website">
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- FONT -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,300italic,300,600" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300italic,300,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
+
+	<!-- ICON -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
@@ -20,91 +30,87 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li class="is-select"><a href="#about">ABOUT</a></li>
-			<li><a href="#works">WORKS</a></li>
-		</ul>
-	</nav>
-	<section id="about">
-		<div class="intro-title">
-			<div class="avatar"></div>
-			<h1 class="name">黃懿瑢<span>Lea</span></h1>
-		</div>
-		<div class="intro">
-			<p>首次接觸網頁是在2014年參加經濟部舉辦的「Open Data創新應用競賽」，以流浪動物為主題，構想出媒合流浪貓狗和認養者的平台，希望流浪動物能有好的歸屬，認養者也能找到心目中最好的寵物，這個點子符合大眾需求也獲得評審青睞。時間壓力下我們利用dicuz快速搭建會員、留言系統，獲得優等成績。這不僅引起我對網頁的興趣，也發現自己的不足</p>
-			<p>之後在剩餘的大學時光，旁聽介面設計的課程、選修網頁實作，加強自己的實力。在實作課程中，構想了關於組樂團的網站，目的是希望能幫樂手找到適合的樂團，或者幫樂團找到缺額的樂手。</p>
-			<p>畢業後任職於運動筆記，擔任前端工程師，期間參與小型客製化活動頁製作、年度站內回顧、介面流程設計與切版。</p>
-		</div>
-	</section>
-	<section id="works">
-		<div class="work-row">
-			<div class="work-img" style="background-image: url('/img/top10.png')"></div>
-			<div class="work-intro">
-				<div class="work-intro-inner">
-					<h3 class="work-title">2015年度回顧</h3>
-					<p class="work-desc"></p>
-					<a href="http://tw.running.biji.co/?q=vote" class="look-more">DEMO</a>
+	<section class="about">
+		<div class="section-inner">
+			<div class="intro">
+				<div class="avatar" style="background-image: url('/img/avatar.jpg')"></div>
+				<div class="info">
+					<h1 class="name">Lea Huang <span>Front-End Developer</span></h1>
+					<a href="tel:0975-425-783"><div class="fa fa-phone"> 0975-425-783</div></a>
+					<a href="mailto:g5l64jo3@gmail.com"><div class="fa fa-envelope"> g5l64jo3@gmail.com</div></a>
 				</div>
 			</div>
-		</div>
-		<div class="work-row">
-			<div class="work-intro">
-				<div class="work-intro-inner">
-					<h3 class="work-title">站內改版</h3>
-					<p class="work-desc">依流程與使用者習慣再次設計</p>
-					<a href="http://tw.running.biji.co/?q=album" class="look-more">改版成品</a>
-				</div>
-			</div>
-			<div class="work-img" style="background-image: url('/img/album.png')"></div>
-		</div>
-		<div class="work-row">
-			<div class="work-img" style="background-image: url('/img/minisite.png')"></div>
-			<div class="work-intro">
-				<div class="work-intro-inner">
-					<h3 class="work-title">行銷合作</h3>
-					<p class="work-desc">品牌專屬客製化活動頁</p>
-					<a href="http://tw.running.biji.co/?q=minisite&act=minisite&ads=minisite&minisite_id=39" class="look-more">DEMO</a>
-				</div>
-			</div>
-			<div class="work-row">
-				<div class="work-intro">
-					<div class="work-intro-inner">
-						<h3 class="work-title">購物流程</h3>
-						<p class="work-desc"></p>
-						<a href="http://tw.running.biji.co/?q=buy" class="look-more">DEMO</a>
+			<ul class="detail-list">
+				<li class="detail">
+					<h4 class="title">EDUCATION</h4>
+					<div class="content">
+						<span class="date">Sep 2011 - Jun 2015</span>
+						<div>
+							<a href="http://www.ntust.edu.tw" target="_blank">National Taiwan University of Science and Technology</a>, Major in Department of Computer Science and Information Engineering
+						</div>
 					</div>
-				</div>
-				<div class="work-img" style="background-image: url('/img/product.png')"></div>
+				</li>
+				<li class="detail">
+					<h4 class="title">EXPERIENCE</h4>
+					<div class="content">
+						<span class="date">Aug 2015 - </span>
+						<div>be a front-end developer of <a href="http://tw.running.biji.co/" target="_blank">BIJI NOTE</a>, also get to know more about UX and back-end</div>
+					</div>
+				</li>
+				<li class="detail">
+					<h4 class="title">SKILL</h4>
+					<div class="content">html, css, sass, javascript, jquery, node.js, php, mysql, git</div>
+				</li>
+			</ul>
+			<div class="scroll-tip">SCROLL</div>
+		</div>
+	</section>
+	<section class="backend-works">
+		<div class="section-inner">
+			<h3 class="section-title">BACK-END WORKS</h3>
+			<div class="works-list">
+				<a href="http://tw.running.biji.co/index.php?q=route&act=form" class="works-item">
+					<div class="works-img" style="background-image: url('/img/back1.png')"></div>
+					<div class="works-info">
+						<div class="works-title">Crop image easily</div>
+						<div class="works-desc">It provides user a easy way to crop image, to get a proper size which is fit the view of webpage. Also do a great work on mobile.</div>
+					</div>
+				</a>
+				<a href="http://tw.running.biji.co/?q=campaign&act=annual2016&nav=vote" class="works-item">
+					<div class="works-img" style="background-image: url('/img/back2.png')"></div>
+					<div class="works-info">
+						<div class="works-title">Annual activity with voting</div>
+						<div class="works-desc">To enhance the interactive with users, they can vote one person they like everyday. And look back what had happened in the past year.</div>
+					</div>
+				</a>
+				<a href="http://tw.running.biji.co/index.php?q=member&act=member_comp&mid=XDDgk" class="works-item">
+					<div class="works-img" style="background-image: url('/img/back3.png')"></div>
+					<div class="works-info">
+						<div class="works-title">Keep the competition record</div>
+						<div class="works-desc">You can write down the record and review of competition has accomplished. And find the photo which is tag on your competition number.</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</section>
-	<footer>
-		<div class="copyright">
-			© LEA HUANG 
+	<section class="ui-works">
+		<div class="section-inner">
+			<h3 class="section-title">UI WORKS</h3>
+			<div class="works-grid">
+				<a href="http://tw.running.biji.co" class="works-item">
+					<div class="works-img" style="background-image: url('/img/ui1.png')"></div>
+				</a>
+				<a href="http://tw.running.biji.co/?q=campaign&act=annual2016" class="works-item">
+					<div class="works-img" style="background-image: url('/img/ui2.png')"></div>
+				</a>
+				<a href="http://tw.running.biji.co/?q=static&act=run_for_taiwan" class="works-item">
+					<div class="works-img" style="background-image: url('/img/ui3.png')"></div>
+				</a>
+			</div>
 		</div>
-	</footer>
+	</section>
+	<div class="copyright">
+		© LEA HUANG 
+	</div>
 </body>
 </html>
-
-<script>
-	$('nav>ul>li').click(function() {
-	    event.preventDefault();
-	    var dom = $(this).children('a').attr('href');
-	    $('html, body').animate({
-	        scrollTop: $(dom).offset().top - 130
-	    }, 500);
-	    console.log($(dom).offset().top);
-	});
-	$(window).scroll(function() {
-		if($(window).scrollTop() == $('#works').offset().top) {
-			alert();
-			$('nav>ul>li').removeClass('is-select');
-			$('a[href$="#work"]').addClass('is-select');
-		}
-	});
-	$('nav li').click(function(){
-		$(this).addClass('is-select');
-		$(this).siblings('li').removeClass('is-select');
-	});
-</script>

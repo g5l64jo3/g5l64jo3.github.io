@@ -1,3 +1,8 @@
+@mixin calc($property, $expression)
+	#{$property}: -moz-calc(#{$expression})
+	#{$property}: -webkit-calc(#{$expression})
+	#{$property}: calc(#{$expression})
+	
 @mixin psa($top:null,$right:null,$bottom:null,$left:null,$zindex:null)
 	position: absolute
 	top: $top
@@ -6,12 +11,19 @@
 	left: $left
 	z-index: $zindex
 
-@mixin inline-block($position)
-	display: inline-block
-	vertical-align: $position
-
 @mixin bg-style($position:null, $style:cover)
 	background-position: $position
 	background-repeat: no-repeat
 	+background-size($style)
 	
+@mixin font-smoothing($value: antialiased)
+	@if $value == antialiased
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+	@else
+		-webkit-font-smoothing: subpixel-antialiased
+		-moz-osx-font-smoothing: auto
+
+@mixin mobile()
+	@media only screen and (max-width: 620px)
+		@content
